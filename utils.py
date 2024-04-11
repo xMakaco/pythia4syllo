@@ -1,8 +1,3 @@
-import nltk
-
-#FROM NLTK, DOWNLOAD THE WORDNET CORPUS
-nltk.download('wordnet')
-
 #FUNCTION TO GIVE A SYLLOGISM THE AAA-1 STRUCTURE AND THE VALID LABLE
 def make_barbara1(m, p, s):
     prop1 = f"all {m} are {p}"
