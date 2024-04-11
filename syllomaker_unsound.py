@@ -16,9 +16,9 @@ nltk.download('wordnet')
 synsets = list(wn.all_synsets())
 
 #ASSIGN A RANDOM WORD FROM WORDNET TO THREE VARIABLES
-x = random.choice(synsets).name().split('.')[0].replace('_', '')
-y = random.choice(synsets).name().split('.')[0].replace('_', '')
-z = random.choice(synsets).name().split('.')[0].replace('_', '')
+x = random.choice(synsets).name().split('.')[0].replace('_', ' ')
+y = random.choice(synsets).name().split('.')[0].replace('_', ' ')
+z = random.choice(synsets).name().split('.')[0].replace('_', ' ')
 
 #ACTUALLY CREATE THE SYLLOGISM
 dataline = make_syllogism(x, y, z, figure)
