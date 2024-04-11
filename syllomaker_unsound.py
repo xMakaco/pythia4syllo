@@ -9,6 +9,9 @@ print(type(figure))
 if figure not in [1,2,3,4]:
     raise TypeError("that is not a valid figure :(")
 
+#FROM NLTK, DOWNLOAD THE WORDNET CORPUS
+nltk.download('wordnet')
+
 #GET A LIST OF ALL THE SYNSETS IN WORDNET
 synsets = list(wn.all_synsets())
 
