@@ -14,7 +14,7 @@ python3 syllomaker-random.py
 ```
 - syllomaker-manual.py creates syllogisms given the input of the user. 
 ```
-python3 syllomaker-hand.py
+python3 syllomaker-manual.py
 ```
 This allows the user to control the items (and thus the soundness) and figure (and thus validity) of the syllogism
 ## Dependencies
