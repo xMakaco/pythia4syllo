@@ -7,7 +7,7 @@
   
 
 # Syllomaker
-A program made to generate different types of AAA syllogisms.
+A program made to generate different types of syllogisms.
 - syllomaker-random.py creates 100 random syllogisms with a 0.5 probability of validity.
 ```
 python3 syllomaker-random.py
