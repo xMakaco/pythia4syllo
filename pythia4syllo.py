@@ -1,14 +1,14 @@
 """Use the pythia4sillo to interact with Pythia.
 Usage:
-    pythia4syllo.py --model_size=[70M|160M|410M|1.0B|1.4B|2.8B|6.9B|12B]  --modality=[user|dataset]
+    pythia4syllo.py [--model_size=<str> --modality=[user|dataset]]
     pythia4syllo.py (-h | --help)
-    (-h | --help) --version
+    pythia4syllo.py --version
 
 Options:
-    -h --help                                               Show this screen.
-    --version                                               Show version.
-    --model_size=[70M|160M|410M|1.0B|1.4B|2.8B|6.9B|12B]    The size of pythia to use. [default: 70M]
-    --modality=[user|dataset]                               User inputed prompt or prompt to be taken from a dataset. [default: user]
+    -h --help                   Show this screen.
+    --version                   Show version.
+    --model_size=<str>          The size of pythia to use [default: 70M].
+    --modality=[user|dataset]   User inputed prompt or prompt to be taken from a dataset [default: user].
 """
 
 
@@ -19,7 +19,7 @@ from datetime import datetime  # Date and time, used to create a unique ID for e
 import os, csv  # Libraries to create the log file
 from docopt import docopt  # Used to use argparser and to manage the version of the program
 import sys  # To exit the program and print error when using the program wrong
-
+from transformers import set_seed
 
 
 if __name__ == '__main__':
@@ -32,6 +32,9 @@ if __name__ == '__main__':
 
 
     """ Choose and load model """
+    # Ensure reproducibility
+    set_seed(0)  
+
     # Pythia comes in 8 sizes, in standard and deduped version
     # https://github.com/EleutherAI/pythia
     # We are using the standard one
@@ -76,14 +79,14 @@ if __name__ == '__main__':
         tokens = model.generate(
             **inputs,
             #max_length=200,           #  Maximum length of the output. (output = user_input + answer). Use max_new_tokens instead?
-            max_new_tokens=50,        #  The number of new tokens, i.e. the lenght of the answer of the model
+            max_new_tokens=25,        #  The number of new tokens, i.e. the lenght of the answer of the model
             temperature=0.1,          #  Randomness, see https://huggingface.co/blog/how-to-generate#:~:text=A%20trick%20is,look%20as%20follows.
             top_p=0.6,                #  See https://huggingface.co/blog/how-to-generate#top-p-nucleus-sampling
             top_k=5,                  #  See https://huggingface.co/blog/how-to-generate#top-k-sampling
             repetition_penalty=1.0,   #  See https://huggingface.co/docs/transformers/internal/generation_utils#transformers.TFRepetitionPenaltyLogitsProcessor.repetition_penalty
             do_sample=True,           #  See https://stackoverflow.com/a/71281111/21343868
-            no_repeat_ngram_size=2,
-            num_beams=2,
+            #no_repeat_ngram_size=2,
+            #num_beams=2,
             eos_token_id=tokenizer.eos_token_id,
             pad_token_id=tokenizer.eos_token_id,
             )
@@ -98,7 +101,7 @@ if __name__ == '__main__':
         return answer
     
 
-    def save_log(text):
+    def save_log(text, mod):
         """
         This function enables to save the parameters of the interaction in a log file
         The expected input of "text" is a list of strings
@@ -110,7 +113,11 @@ if __name__ == '__main__':
         file_path = f"/log_{model_size}.tsv"
 
         # The list of parameters we want to log
-        log_components = ["interaction_id", "premises", "expected_answer", "trigger", "other", "model_response"]
+        # The list of parameters we want to log
+        if mod == "long":
+            log_components = ["interaction_id", "premises", "expected_answer", "trigger", "other", "model_response"]
+        elif mod == "short":
+            log_components = ["interaction_id", "prompt", "response"]
 
         # If the file does not exist
         if not os.path.exists(file_path):
@@ -126,14 +133,14 @@ if __name__ == '__main__':
                 writer = csv.writer(tsvfile, delimiter='\t', lineterminator='\n')
                 writer.writerow(text)
             #print("Log updated")
-
+    
 
     def chat_with_model():
         """ Interact with the model with manual input """
 
         # Store the time
-        now = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
-        print(f"{5*'#'} GPT-NeoX Chat Interface. Type 'exit' to stop. {now}  {5*'#'}\n")
+        now = datetime.now().strftime("%d%m%Y_%H%M%S")
+        print(f"{5*'#'} GPT-NeoX Chat Interface with Pythia {model_size}. Type 'exit' to stop. {now}  {5*'#'}\n")
 
         # Store the number of the interaction
         prompt_num = 1
@@ -152,30 +159,37 @@ if __name__ == '__main__':
             reduced_r = response[len(user_input):]  # Don't print the user input again
             print(f'Model {model_size}, answer to "{user_input}": \n {reduced_r}')
             print(f"{3*'#'} End of interaction {prompt_num} {3*'#'}\n")
+
+            # Store answer
+            interaction_id = f"{now}_{prompt_num}"
+            log = [interaction_id, user_input, reduced_r]
+            save_log(log, "short")
+
             prompt_num += 1
+
 
     def chat_and_save_log():
         """ Interact with the model and automatically save log """
         # TODO: Prepare the code to load the datasets of syllogisms
 
         # For now, manually input your prompt in "premises"
-        premises = "All grapes are interferences. All interferences are jackets. "
-        trigger = ["Therefore", "It follows that", "We conclude that", "What follows", "The conlcusion is", "We can conclude that", "A simple inference is"]
-        other = [":", "...", ",", "?", "", ", in short: ", ", in short, "]
-        expected_answer = "All grapes are jackets."
+        premises = "All laptops are alcoholic. All alcoholic are self-automatized. "
+        trigger = ["Therefore", "It follows that", "We conclude that", "The conlcusion is", "We can conclude that", "A simple inference is"]  # Removed "What follows"
+        other = [":", ",", "?", "", ", in short: ", ", in short, "]  # Removed "..."
+        expected_answer = "All laptops are self-automatized."
 
         # Unique id for each interaction (example: "23/04/2023 12:33:54" becomes "23042023_123354")
         date_time = datetime.now().strftime("%d%m%Y_%H%M%S")
-        model_specs = f"pythia-{model_size}"
         id = 1
 
         for t in trigger:
             for o in other:
-                print(f"Prompt: {premises + t + o}")
-                model_response = ask_question(premises + t + o)  # Join together the pieces
-                model_response = model_response[len(premises):]  # Remove the premises from the output
+                combination = premises + t + o
+                print(f"Prompt: {combination}")
+                model_response = ask_question(combination)  # Join together the pieces
+                model_response = model_response[len(combination):]  # Remove the premises from the output
                 log_components = [f"{date_time}_{id}", f'"{premises}"', f'"{expected_answer}"', t, o, f'"{model_response}"']
-                save_log(log_components)
+                save_log(log_components, "long")
                 id += 1
         print("Done!")
 
