@@ -67,25 +67,26 @@ def load_model_and_tokenizer(model_size):
 def ask_question(prompt):
     """
     Interact with the model
-    input: prompt
-    output: answer (cut, without prompt)
+    :param: prompt
+    :type: str
+    :return: answer without prompt
+    :rtype: str
     """
-    # TODO: add input and output types
 
     # If possible, load both the model and the tokenizer to CUDA to speed up the process
-    inputs = tokenizer(prompt, return_tensors="pt").to(device)
+    inputs = tokenizer(prompt, return_tensors = "pt").to(device)
     model.to(device)
 
     # Generate answer with the specified hyperparameters
     tokens = model.generate(
         **inputs,
         #max_length=200,          # SET TO DEFAULT
-        max_new_tokens=25,        #  The number of new tokens, i.e. the lenght of the answer of the model
-        temperature=0.1,          #  Randomness, see https://huggingface.co/blog/how-to-generate#:~:text=A%20trick%20is,look%20as%20follows.
-        top_p=0.6,                #  See https://huggingface.co/blog/how-to-generate#top-p-nucleus-sampling
-        top_k=5,                  #  See https://huggingface.co/blog/how-to-generate#top-k-sampling
-        repetition_penalty=1.0,   #  See https://huggingface.co/docs/transformers/internal/generation_utils#transformers.TFRepetitionPenaltyLogitsProcessor.repetition_penalty
-        do_sample=True,           #  See https://stackoverflow.com/a/71281111/21343868
+        max_new_tokens=75,        # The number of new tokens, i.e. the lenght of the answer of the model
+        temperature=0.1,          # Randomness, see https://huggingface.co/blog/how-to-generate#:~:text=A%20trick%20is,look%20as%20follows.
+        top_p=0.6,                # See https://huggingface.co/blog/how-to-generate#top-p-nucleus-sampling
+        top_k=5,                  # See https://huggingface.co/blog/how-to-generate#top-k-sampling
+        repetition_penalty=1.0,   # See https://huggingface.co/docs/transformers/internal/generation_utils#transformers.TFRepetitionPenaltyLogitsProcessor.repetition_penalty
+        do_sample=True,           # See https://stackoverflow.com/a/71281111/21343868
         #no_repeat_ngram_size=2,
         #num_beams=2,
         eos_token_id=tokenizer.eos_token_id,

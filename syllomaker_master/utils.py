@@ -67,13 +67,13 @@ def make_premises(mood, fig, m, p, s):
 
     # CREATE PREMISES ACORDING TO FIGURE
     if fig == 1:
-        prem1 = f"{quant1} {m} are {polarity1}{p}"; prem2 = f"{quant2} {s} are {polarity2}{m}"
+        prem1 = f"{quant1} {m} are {polarity1}{p}."; prem2 = f"{quant2} {s} are {polarity2}{m}."
     elif fig == 2:
-        prem1 = f"{quant1} {p} are {polarity1}{m}"; prem2 = f"{quant2} {s} are {polarity2}{m}"
+        prem1 = f"{quant1} {p} are {polarity1}{m}."; prem2 = f"{quant2} {s} are {polarity2}{m}."
     elif fig == 3:
-        prem1 = f"{quant1} {m} are {polarity1}{p}"; prem2 = f"{quant2} {m} are {polarity2}{s}"
+        prem1 = f"{quant1} {m} are {polarity1}{p}."; prem2 = f"{quant2} {m} are {polarity2}{s}."
     elif fig == 4:
-        prem1 = f"{quant1} {p} are {polarity1}{m}"; prem2 = f"{quant2} {m} are {polarity2}{s}"
+        prem1 = f"{quant1} {p} are {polarity1}{m}."; prem2 = f"{quant2} {m} are {polarity2}{s}."
     
     return prem1, prem2
 
