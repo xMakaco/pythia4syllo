@@ -1,5 +1,5 @@
 """
-Use the pythia4sillo to interact with Pythia.
+Use the pythia4syllo to interact with Pythia.
 Usage:
     pythia4syllo.py [--model_size=<str> --modality=[chat|dataset]]
     pythia4syllo.py (-h | --help)
@@ -27,7 +27,7 @@ from tqdm import tqdm  # A simple progress bar
 
 
 """ Docopt is used to provide a little documentation for the program """
-args = docopt(__doc__, version='Pythia for Syllogisms, ver 0.1')
+args = docopt(__doc__, version = 'Pythia for Syllogisms, ver 0.1')
 model_size = args["--model_size"]   # Default is "70M"
 modality = args["--modality"]       # Default is "chat"
 
