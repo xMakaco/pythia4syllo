@@ -81,12 +81,12 @@ def ask_question(prompt):
     tokens = model.generate(
         **inputs,
         #max_length=200,          # SET TO DEFAULT
-        max_new_tokens=75,        # The number of new tokens, i.e. the lenght of the answer of the model
-        temperature=0.1,          # Randomness, see https://huggingface.co/blog/how-to-generate#:~:text=A%20trick%20is,look%20as%20follows.
-        top_p=0.6,                # See https://huggingface.co/blog/how-to-generate#top-p-nucleus-sampling
-        top_k=5,                  # See https://huggingface.co/blog/how-to-generate#top-k-sampling
-        repetition_penalty=1.0,   # See https://huggingface.co/docs/transformers/internal/generation_utils#transformers.TFRepetitionPenaltyLogitsProcessor.repetition_penalty
-        do_sample=True,           # See https://stackoverflow.com/a/71281111/21343868
+        max_new_tokens=25,        #  The number of new tokens, i.e. the lenght of the answer of the model
+        temperature=0.1,          #  Randomness, see https://huggingface.co/blog/how-to-generate#:~:text=A%20trick%20is,look%20as%20follows.
+        top_p=0.6,                #  See https://huggingface.co/blog/how-to-generate#top-p-nucleus-sampling
+        top_k=5,                  #  See https://huggingface.co/blog/how-to-generate#top-k-sampling
+        repetition_penalty=1.0,   #  See https://huggingface.co/docs/transformers/internal/generation_utils#transformers.TFRepetitionPenaltyLogitsProcessor.repetition_penalty
+        do_sample=True,           #  See https://stackoverflow.com/a/71281111/21343868
         #no_repeat_ngram_size=2,
         #num_beams=2,
         eos_token_id=tokenizer.eos_token_id,
@@ -178,15 +178,15 @@ def run_model_on_data(syllogism_path, trigger):
     data = pd.read_csv(syllogism_path, delimiter="\t")
 
     # Create an empty DataFrame with these columns
-    log_columns = ['mood_figure', 'premise_1', 'premise_2', 'trigger', 'conclusion_1', 'conclusion_2', 'model_response']
+    log_columns = ['type', 'premise_1', 'premise_2', 'trigger', 'conclusion', 'conclusion_2', 'model_response']
     log_dataframe = pd.DataFrame(columns=log_columns)
 
     # For each row in the syllogism file
     # tqdm is used to have a progress bar
     for index, row in tqdm(data.iterrows(), total=data.shape[0]):
-        mood_figure = row.mood_figure
-        p1 = row.premise_1 + ". "  # Add a period and a space
-        p2 = row.premise_2 + ". "
+        type = row.type
+        p1 = row.premise_1
+        p2 = row.premise_2
         c1 = row.conclusion
         c2 = row.conclusion_2
 
@@ -197,11 +197,11 @@ def run_model_on_data(syllogism_path, trigger):
 
         # Assign each variable to the right column to create the final log
         new_result = {
-            'mood_figure': mood_figure,
+            'type': type,
             'premise_1': p1,
             'premise_2': p2,
             'trigger' : trigger,
-            'conclusion_1': c1,
+            'conclusion': c1,
             'conclusion_2': c2,
             'model_response': model_response
         }
@@ -222,7 +222,7 @@ def run_model_on_data(syllogism_path, trigger):
 """ HERE THE MODEL IS ACTUALLY LOADED AND THE CHOSEN MODALITY RUN """
 
 model, tokenizer, device = load_model_and_tokenizer(model_size)
-syllogism_path = "./syllomaker_program/syllogism_data.tsv"
+syllogism_path = "./syllogism_data.tsv"
 
 if modality == "chat":  # Default
     chat_with_model()
