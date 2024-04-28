@@ -20,7 +20,7 @@ Options:
 from docopt import docopt
 from utils import *
 
-args = docopt(__doc__, version = 'Syllomaker 4.1 - Now with more syllogisms! 😉')
+args = docopt(__doc__, version = 'Syllomaker 4.2 - Now with more syllogisms! 😉')
 mood = args['--mood']
 fig = args['--figure']
 n = int(args['--num'])
