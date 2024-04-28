@@ -1,11 +1,9 @@
-<p style="text-align: center;">
                                    _ _                       _             
            .___,         ___ _   _| | | ___  _ __ ___   __ _| | _____ _ __         .___,
         ___('v')___     / __| | | | | |/ _ \| '_ ` _ \ / _` | |/ / _ \ '__|     ___('v')___    
         `"-\._./-"´     \__ \ |_| | | | (_) | | | | | | (_| |   <  __/ |        `"-\._./-"´
             ^ ^         |___/\__, |_|_|\___/|_| |_| |_|\__,_|_|\_\___|_|            ^ ^ 
             '''              |___/                                                  '''
-</p>
                                                                   
 # Syllomaker
 A program made to generate sets of syllogisms given the mood and figure of the premises.
