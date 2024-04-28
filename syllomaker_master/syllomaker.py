@@ -1,6 +1,7 @@
 """
 Syllomaker has been built to create sets of nonsense valid syllogisms.
 These sets can be used for probing the abstract reasoning of humans or language models.
+Read README.md for more information.
 
 Usage:
     syllomaker.py [options]
