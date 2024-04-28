@@ -1,17 +1,17 @@
 """
 Use the pythia4syllo to interact with Pythia.
 Usage:
-    pythia4syllo.py [--model_size=<str> --modality=[chat|dataset] --syllogism_data_path=<str>]
+    pythia4syllo.py [--model_size=<str> --modality=[chat|dataset] --syllogism_data_path=<path>]
     pythia4syllo.py (-h | --help)
     pythia4syllo.py --version
 
 Options:
-    -h --help                       Show this screen.
-    -v --version                    Show version.
-    -s --model_size=<str>           The size of pythia to use [default: 70M].
-                                    Possible sizes are: "70M", "160M", "410M", "1.0B", "1.4B", "2.8B", "6.9B", "12B".
-    -m --modality=[chat|dataset]    chat inputed prompt or prompt to be taken from a dataset [default: chat].
-    -d --syllogism_data_path=<str>  The path to the syllogism_data.tsv.
+    -h --help                           Show this screen.
+    -v --version                        Show version.
+    -s --model_size=<str>               The size of pythia to use [default: 70M].
+                                        Possible sizes are: "70M", "160M", "410M", "1.0B", "1.4B", "2.8B", "6.9B", "12B".
+    -m --modality=[chat|dataset]        Either enter a chat-style interaction or load a dataset [default: chat].
+    -d --syllogism_data_path=<path>     The path to the syllogism_data.tsv. [default: syllomaker_master/toy_syllogism_data.tsv]
 """
 
 
