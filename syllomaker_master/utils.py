@@ -10,14 +10,10 @@ except:
 
 ##### CHECK ARGUMENTS GIVEN #####
 
-def check_args(mood, fig, n, filename):
+def check_args(mood, n, filename):
     # CHECK MOOD
     if (mood[0] or mood[1]) not in ['A', 'E', 'I', 'O']:
         raise TypeError("Mood not valid! 😓")
-    
-    # CHECK FIGURE
-    if fig not in ['1', '2', '3', '4', 'r']: 
-        raise TypeError("Figure not valid! 😓")
     
     # CHECK NUMBER OF SYLLOGISMS
     if n < 1:
@@ -93,7 +89,7 @@ def make_conclusion(mood, fig, p, s):
         if premtype in list:
             quant_conc = quantifiers.get(list[0])
             polar_conc = 'not ' if list[0] == 'O' else ''
-            conc = f"{quant_conc} {s} are {polar_conc}{p}"
+            conc = f"{quant_conc} {s} are {polar_conc}{p}."
             break   # it is necessary to break the for loop once the type is found
         conc = "NVC"
 
@@ -102,24 +98,28 @@ def make_conclusion(mood, fig, p, s):
     if premtype in double_val:
         quant_conc2 = 'Some'
         polar_conc2 = '' if premtype == 'AA1' else 'not '
-        conc2 = f"{quant_conc2} {s} are {polar_conc2}{p}"
+        conc2 = f"{quant_conc2} {s} are {polar_conc2}{p}."
     else: conc2 = ""
 
     return conc, conc2
 
 
 def make_syllogism(mood, fig, m, p, s):
-    if fig == 'r': fig = random.choice([1, 2, 3, 4])
-    else: fig = int(fig)
+    # GET FIGURE
+    if fig == 'r': fig = random.choice([1, 2, 3, 4]) 
+    else:
+        for f in fig:
+            if f not in ['1', '2', '3', '4']:
+                raise TypeError("Figure not valid! 😓")
+        fig = int(fig) if len(fig) == 1 else random.choice([int(f) for f in fig])
+        
     premise1, premise2 = make_premises(mood, fig, m, p, s)
     conclusion, conclusion2 = make_conclusion(mood, fig, p, s)
 
     # RANDOMISE THE ORDER OF PREMISES
     order = random.choice([0, 1])
-    if order == 0:  #normal order of premises
-        premises = f"{premise1}\t{premise2}"
-    if order == 1:  #switched order of premises
-        premises = f"{premise1}\t{premise2}"
+    premises = f"{premise1}\t{premise2}" if order == 0 else f"{premise2}\t{premise1}"
+   
     syllogism = f"{mood}{fig}\t{premises}\t{conclusion}\t{conclusion2}"
 
     return syllogism

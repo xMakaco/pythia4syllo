@@ -10,9 +10,9 @@ Options:
     -h --help                               Show this screen.
     -v, --version                           Show version.
     -m, --mood <two_letters>                Mood of the premises, e.g. AA, AO, EI, etc.
-    -f, --figure (1|2|3|4|r)                Figure of the premises.
-    -n, --num <int>                         Amount of syllogisms to create for the given mood (only in auto mode). [default: 5]
-    -i, --items <m,p,s>                     List of items to use in one syllogism, separated by commas. [default: ]
+    -f, --figure ([1|2|3|4]+|r)             Figure of the premises. Can be one of more numbers in [1, 4] or 'r' for random.
+    -n, --num <int>                         Amount of syllogisms to create for the given mood (only in auto mode). [default: 3]
+    -i, --items <m,p,s>                     List of items to use in one syllogism, separated by commas without spaces. [default: ]
     -d, --datafile <filename>               Name of the file where the syllogisms will be stored. [default: syllogism_data.tsv]
 """
 
@@ -27,7 +27,7 @@ items = args['--items']
 filename = args['--datafile']
 file = open(filename, 'a+')
 
-check_args(mood, fig, n, filename)
+check_args(mood, n, filename)
 
 # IF THERE ARE NO ITEMS GIVEN, WE GO INTO THE AUTOMATIC LOOP
 if items == '':
@@ -60,3 +60,4 @@ else:
     dataline = make_syllogism(mood, fig, x, y, z)
     print(dataline)
     file.write(f"{dataline}\n")
+    
