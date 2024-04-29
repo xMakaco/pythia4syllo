@@ -167,7 +167,7 @@ def run_model_on_data():
         new = False
     else:
         # Create the file where to store log if it doesn't exist
-        data_log_columns = ['type', 'context', 'premise_1', 'premise_2', 'trigger', 'conclusion', 'conclusion_2', 'model_response']
+        data_log_columns = ['type', 'context', 'premise_1', 'premise_2', 'conclusion', 'conclusion_2', 'trigger', 'model_response']
         data_log_df = pd.DataFrame(columns=data_log_columns)
         
     # Ask for context and trigger
@@ -192,8 +192,8 @@ def run_model_on_data():
             'type': type,
             'context': context,
             'premise_1': p1, 'premise_2': p2,
-            'trigger' : trigger,
             'conclusion': c1, 'conclusion_2': c2,
+            'trigger' : trigger,
             'model_response': model_response
         }
 
