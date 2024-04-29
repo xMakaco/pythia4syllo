@@ -45,9 +45,9 @@ if modality == "dataset":
 # Pythia comes in 8 sizes, in standard and deduped version (https://github.com/EleutherAI/pythia)
 # We are using the standard one
 # If the chosen model size is not valid, print usage and exit
-possible_sizes = ["70M", "160M", "410M", "1.0B", "1.4B", "2.8B", "6.9B", "12B"]
-if model_size not in possible_sizes or modality not in ["chat", "dataset"]:
-    raise Exception("modality has to be either 'chat' or 'dataset'")
+#possible_sizes = ["70M", "160M", "410M", "1.0B", "1.4B", "2.8B", "6.9B", "12B"]
+#if model_size not in possible_sizes or modality not in ["chat", "dataset"]:
+#    raise Exception("modality has to be either 'chat' or 'dataset'")
 
 
 def load_model_and_tokenizer(model_size):
