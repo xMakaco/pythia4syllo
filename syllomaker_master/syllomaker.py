@@ -12,7 +12,7 @@ Options:
     -v, --version                           Show version.
     -m, --mood ([A|I|E|O]*2)                Mood of the premises, two letters in {A, I, E, O}, e.g. AA, AO, EI, etc.
     -f, --figure ([1|2|3|4]+|r)             Figure of the premises. Can be one of more numbers in [1, 4] or 'r' for random.
-    -n, --num <int>                         Amount of syllogisms to create for the given mood (only in auto mode). [default: 3]
+    -n, --num <int>                         Amount of syllogisms to create for the given mood (only in auto mode). [default: 5]
     -i, --items <m,p,s>                     List of items to use in one syllogism, separated by commas without spaces. [default: ]
     -d, --datafile <filename>               Name of the file where the syllogisms will be stored. [default: syllogism_data.tsv]
 """
