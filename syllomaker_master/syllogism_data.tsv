@@ -1,0 +1,61 @@
+type	premise_1	premise_2	conclusion	conclusion_2
+AI1	All pomes are meat houses.	Some perilymphs are pomes.	NVC	
+AI1	All organs are shoulder bags.	Some cuffs are organs.	NVC	
+AI1	All garden peas are thrusters.	Some cardholders are garden peas.	NVC	
+AI1	All hyperons are bathyerguses.	Some india-rubber trees are hyperons.	NVC	
+AI1	All chaffs are oyster bars.	Some coniferopsidas are chaffs.	NVC	
+AI3	All eye contacts are sea lettuces.	Some eye contacts are red-breasted sapsuckers.	Some red-breasted sapsuckers are sea lettuces.	
+AI3	All acoustic nerves are somalian shillings.	Some acoustic nerves are commissarys.	Some commissarys are somalian shillings.	
+AI3	All significances are malpighias.	Some significances are race meetings.	Some race meetings are malpighias.	
+AI3	All neurectomys are chess sets.	Some neurectomys are cuts.	Some cuts are chess sets.	
+AI3	All lepers are marshall plans.	Some lepers are kotas.	Some kotas are marshall plans.	
+AA1	All stellarias are el salvadoran monetary units.	All satellite receivers are stellarias.	All satellite receivers are el salvadoran monetary units.	Some satellite receivers are el salvadoran monetary units.
+AA1	All bath mats are linoleums.	All samoyedics are bath mats.	All samoyedics are linoleums.	Some samoyedics are linoleums.
+AA1	All sceliphrons are securitys.	All beatings are sceliphrons.	All beatings are securitys.	Some beatings are securitys.
+AA1	All organic chemistrys are curled leaf pondweeds.	All compressions are organic chemistrys.	All compressions are curled leaf pondweeds.	Some compressions are curled leaf pondweeds.
+AA1	All essayists are forms.	All rices are essayists.	All rices are forms.	Some rices are forms.
+AA4	All mucopolysaccharides are first estates.	All first estates are samaras.	Some samaras are mucopolysaccharides.	
+AA4	All archeologys are peis.	All peis are spurners.	Some spurners are archeologys.	
+AA4	All thrust stages are guidance systems.	All guidance systems are isometrys.	Some isometrys are thrust stages.	
+AA4	All stanleys are glyphs.	All glyphs are oil beetles.	Some oil beetles are stanleys.	
+AA4	All swedish irons are carnot cycles.	All carnot cycles are thunnuses.	Some thunnuses are swedish irons.	
+EE3	No caravansarys are houserooms.	No caravansarys are woods.	NVC	
+EE3	No 1850ses are euros.	No 1850ses are distributive shocks.	NVC	
+EE3	No downs are nematodas.	No downs are figure skates.	NVC	
+EE3	No greaves are mohawks.	No greaves are claviers.	NVC	
+EE2	No basic assumptions are marylanders.	No ringsides are marylanders.	NVC	
+II2	Some acmes are transcriptions.	Some lap joints are transcriptions.	NVC	
+II1	Some water witches are housemasters.	Some supply closets are water witches.	NVC	
+II2	Some programs are superpositions.	Some pilgrim's progresses are superpositions.	NVC	
+II2	Some student lamps are native cranberrys.	Some cuban basts are native cranberrys.	NVC	
+II1	Some combinations are occurrences.	Some dubliners are combinations.	NVC	
+OO2	Some hastinesses are not topic sentences.	Some duns scotuses are not topic sentences.	NVC	
+OO3	Some polygons are not semitones.	Some polygons are not dysphemisms.	NVC	
+OO3	Some dog breedings are not abducens muscles.	Some dog breedings are not ebola hemorrhagic fevers.	NVC	
+OO3	Some balbriggans are not aprons.	Some balbriggans are not basilisks.	NVC	
+OO3	Some exculpations are not thrombolytic therapys.	Some exculpations are not sewers.	NVC	
+AO3	All directorys are consent decrees.	Some directorys are not chachalacas.	NVC	
+AO3	All market values are north islands.	Some market values are not lots.	NVC	
+AO1	All yellow spot funguses are hellhounds.	Some viceroys are not yellow spot funguses.	NVC	
+AO1	All complementary colors are jungermannialeses.	Some pezizaceaes are not complementary colors.	NVC	
+AO4	All cupressuses are object languages.	Some object languages are not souths.	NVC	
+AE1	All fast of esthers are insecuritys.	No genus treponemas are fast of esthers.	NVC	
+AE3	All tarquins are disinvestments.	No tarquins are supports.	NVC	
+AE1	All feedback circuits are edisons.	No genus pavonias are feedback circuits.	NVC	
+AE1	All sallets are noblesses.	No arundinarias are sallets.	NVC	
+AE1	All black eyes are frisians.	No gleams are black eyes.	NVC	
+IO2	Some clifford trusts are tootles.	Some hayses are not tootles.	NVC	
+IO4	Some righteousnesses are bergs.	Some bergs are not rakes.	NVC	
+IO1	Some fibrocystic breast diseases are squiggles.	Some key signatures are not fibrocystic breast diseases.	NVC	
+IO1	Some glochidiums are cambrian mountainses.	Some powdered sugars are not glochidiums.	NVC	
+IO3	Some latins are snafus.	Some latins are not dihydrostreptomycins.	NVC	
+EI1	No micahs are undercharges.	Some suryas are micahs.	Some suryas are not undercharges.	
+EI1	No jinkses are paranoias.	Some turdidaes are jinkses.	Some turdidaes are not paranoias.	
+EI1	No cardiomegalys are errancys.	Some equalizers are cardiomegalys.	Some equalizers are not errancys.	
+EI3	No predeterminations are cannon bones.	Some predeterminations are adonises.	Some adonises are not cannon bones.	
+EI4	No salutatory addresses are ophidiidaes.	Some ophidiidaes are harmonic motions.	Some harmonic motions are not salutatory addresses.	
+EI2	No havels are reproductions.	Some militarists are reproductions.	Some militarists are not havels.	
+EI3	No rubialeses are meteorological balloons.	Some rubialeses are strike zones.	Some strike zones are not meteorological balloons.	
+EI4	No percolates are fire brigades.	Some fire brigades are bonitos.	Some bonitos are not percolates.	
+EI1	No monofocal lens implants are oolongs.	Some folks are monofocal lens implants.	Some folks are not oolongs.	
+EI3	No draws are hatchet mans.	Some draws are baby beds.	Some baby beds are not hatchet mans.	
