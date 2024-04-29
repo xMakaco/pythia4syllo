@@ -1,0 +1,61 @@
+type	premise_1	premise_2	conclusion	conclusion_2
+AI1	Some queensland nuts are wingspans.	All wingspans are microcytes.	NVC	
+AI1	Some jonesboros are leptomeningitises.	All leptomeningitises are pilosellas.	NVC	
+AI1	All sleepyheads are olive oils.	Some snoods are sleepyheads.	NVC	
+AI1	All beratings are electrolysises.	Some national capitals are beratings.	NVC	
+AI1	Some washouts are glottochronologys.	All glottochronologys are tree huggers.	NVC	
+AI3	Some sieva beans are shakedowns.	All sieva beans are presences.	Some shakedowns are presences.	
+AI3	Some bristlecone pines are scrapheaps.	All bristlecone pines are parts bins.	Some scrapheaps are parts bins.	
+AI3	All electrical systems are accusations.	Some electrical systems are lithographs.	Some lithographs are accusations.	
+AI3	All jolliets are forgetfulnesses.	Some jolliets are novembers.	Some novembers are forgetfulnesses.	
+AI3	All micelles are genus episcias.	Some micelles are chicken roundworms.	Some chicken roundworms are genus episcias.	
+AA1	All borgias are root beer floats.	All mounds are borgias.	All mounds are root beer floats.	Some mounds are root beer floats.
+AA1	All science fictions are processings.	All processings are aliases.	All science fictions are aliases.	Some science fictions are aliases.
+AA1	All spicebushes are nubs.	All nubs are fruit bars.	All spicebushes are fruit bars.	Some spicebushes are fruit bars.
+AA1	All undergraduates are exchange traded funds.	All chordate genuses are undergraduates.	All chordate genuses are exchange traded funds.	Some chordate genuses are exchange traded funds.
+AA1	All muscicapidaes are vichy waters.	All usneaceaes are muscicapidaes.	All usneaceaes are vichy waters.	Some usneaceaes are vichy waters.
+AA4	All iconoclasts are sheriffs.	All zulus are iconoclasts.	Some sheriffs are zulus.	
+AA4	All ataraxias are ghettos.	All awkwardnesses are ataraxias.	Some ghettos are awkwardnesses.	
+AA4	All skunks are rifampins.	All lip ferns are skunks.	Some rifampins are lip ferns.	
+AA4	All vertical angles are theaters.	All economic geographys are vertical angles.	Some theaters are economic geographys.	
+AA4	All runways are arrobas.	All turret clocks are runways.	Some arrobas are turret clocks.	
+EE3	No nurses are water conservations.	No nurses are halls.	NVC	
+EE2	No activated carbons are avestans.	No one-sixtieths are avestans.	NVC	
+EE4	No crueltys are little-league teams.	No little-league teams are moneygrubbers.	NVC	
+EE4	No triangular prisms are works.	No works are major depressive episodes.	NVC	
+EE4	No heavys are socages.	No socages are metalwares.	NVC	
+II1	Some kales are ampere-turns.	Some macrobiotic diets are kales.	NVC	
+II3	Some rockerses are surface-to-air missiles.	Some rockerses are draft horses.	NVC	
+II2	Some exultations are meannesses.	Some recitals are meannesses.	NVC	
+II2	Some lepiota naucinas are ready-to-wears.	Some pleurobrachias are ready-to-wears.	NVC	
+II3	Some carpet beaters are chicory escaroles.	Some carpet beaters are demonetizations.	NVC	
+OO3	Some bassinets are not vauxes.	Some bassinets are not triangles.	NVC	
+OO2	Some lanais are not pressure points.	Some calymmatobacteriums are not pressure points.	NVC	
+OO1	Some delusions are not tailstocks.	Some clicks are not delusions.	NVC	
+OO3	Some boletus subvelutipeses are not orthopterous insects.	Some boletus subvelutipeses are not callithrixes.	NVC	
+OO4	Some automotive technologys are not commandments.	Some lotharios are not automotive technologys.	NVC	
+AO1	Some columbia universitys are not butt weldings.	All butt weldings are cutaneous anthraxes.	NVC	
+AO3	All news items are television newses.	Some news items are not bachelorhoods.	NVC	
+AO2	Some politicians are not scarlet clematises.	All coupons are scarlet clematises.	Some politicians are not coupons.	
+AO3	Some tequilas are not waldorf salads.	All tequilas are migrations.	NVC	
+AO3	All chemical industrys are avons.	Some chemical industrys are not scuffers.	NVC	
+AE1	All cowboys are switchers.	No hearts are cowboys.	NVC	
+AE1	No renaissances are clingfishes.	All clingfishes are ctenocephaluses.	NVC	
+AE3	All freshwater breams are salmonidaes.	No freshwater breams are black marlins.	NVC	
+AE1	All recommendations are tetanuses.	No marchantiaceaes are recommendations.	NVC	
+AE1	All blood moneys are water faucets.	No pavlovs are blood moneys.	NVC	
+IO3	Some living quarterses are not midways.	Some living quarterses are glops.	NVC	
+IO3	Some sights are propertys.	Some sights are not kundt's tubes.	NVC	
+IO3	Some sweet scabiouses are stocking fillers.	Some sweet scabiouses are not special court-martials.	NVC	
+IO4	Some baths are not dibbles.	Some irrational motives are baths.	NVC	
+IO2	Some directors are not veracruzes.	Some mutual funds are veracruzes.	NVC		
+EI1	No matters are mastotermes darwiniensises.	Some northeast by norths are matters.	Some northeast by norths are not mastotermes darwiniensises.	
+EI1	Some lysenkos are cannon crackers.	No cannon crackers are emissions.	Some lysenkos are not emissions.	
+EI2	Some hispaniolas are shrines.	No soapweeds are shrines.	Some hispaniolas are not soapweeds.	
+EI2	No substances are gyneolatrys.	Some cordwoods are gyneolatrys.	Some cordwoods are not substances.	
+EI3	No spots are skuas.	Some spots are lakshmis.	Some lakshmis are not skuas.	
+EI3	Some wimbledons are algometers.	No wimbledons are pessimisms.	Some algometers are not pessimisms.	
+EI4	Some barred owls are carbon arc lamps.	No unrulinesses are barred owls.	Some carbon arc lamps are not unrulinesses.	
+EI4	Some umbrella trees are dissimilaritys.	No decks are umbrella trees.	Some dissimilaritys are not decks.	
+EI1	Some haleys are power breakfasts.	No power breakfasts are hatfuls.	Some haleys are not hatfuls.	
+EI4	No magnifications are floorings.	Some floorings are brigades.	Some brigades are not magnifications.	
