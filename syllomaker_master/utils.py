@@ -115,11 +115,7 @@ def make_syllogism(mood, fig, m, p, s):
         
     premise1, premise2 = make_premises(mood, fig, m, p, s)
     conclusion, conclusion2 = make_conclusion(mood, fig, p, s)
-
-    # RANDOMISE THE ORDER OF PREMISES
-    order = random.choice([0, 1])
-    premises = f"{premise1}\t{premise2}" if order == 0 else f"{premise2}\t{premise1}"
    
-    syllogism = f"{mood}{fig}\t{premises}\t{conclusion}\t{conclusion2}"
+    syllogism = f"{mood}{fig}\t{premise1}\t{premise2}\t{conclusion}\t{conclusion2}"
 
     return syllogism
