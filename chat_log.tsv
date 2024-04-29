@@ -1,0 +1,2 @@
+model_size	prompt	model_response
+12B	this is a test	"""  A:  You can use the following code to get the current time in the format you want: String time = new SimpleDateFormat(""yyyy-MM-dd HH:mm:ss"").format(new Date());  This will give you the following output:  2017-01-01 12:00:00  You can"
