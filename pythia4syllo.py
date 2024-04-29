@@ -1,7 +1,7 @@
 """
 Use the pythia4syllo to interact with Pythia.
 Usage:
-    pythia4syllo.py [--model_size=<str> --modality=[chat|dataset] --syllogism_data_path=<path> --device=<str>]
+    pythia4syllo.py [--model_size=<str> --modality=[chat|dataset] --syllogism_data_path=<path> --device=[cuda|cpu]]
     pythia4syllo.py (-h | --help)
     pythia4syllo.py --version
 
@@ -12,7 +12,7 @@ Options:
                                         Possible sizes are: "70M", "160M", "410M", "1.0B", "1.4B", "2.8B", "6.9B", "12B".
     -m --modality=[chat|dataset]        Either enter a chat-style interaction or load a dataset [default: chat].
     -p --syllogism_data_path=<path>     The path to the syllogism_data.tsv. [default: syllomaker_master/toy_syllogism_data.tsv]
-    -d --device=<str>                   Choose the device on which to run the model [default: cpu]
+    -d --device=[cuda|cpu]              Choose the device on which to run the model [default: cpu]
 """
 
 
