@@ -1,7 +1,7 @@
 """
 Use the pythia4syllo to interact with Pythia.
 Usage:
-    pythia4syllo.py [--model_size=<str> --modality=[chat|dataset] --syllogism_data_path=<path>]
+    pythia4syllo.py [--model_size=<str> --modality=[chat|dataset] --syllogism_data_path=<path> --device=<str>]
     pythia4syllo.py (-h | --help)
     pythia4syllo.py --version
 
@@ -11,7 +11,8 @@ Options:
     -s --model_size=<str>               The size of pythia to use [default: 70M].
                                         Possible sizes are: "70M", "160M", "410M", "1.0B", "1.4B", "2.8B", "6.9B", "12B".
     -m --modality=[chat|dataset]        Either enter a chat-style interaction or load a dataset [default: chat].
-    -d --syllogism_data_path=<path>     The path to the syllogism_data.tsv. [default: syllomaker_master/toy_syllogism_data.tsv]
+    -p --syllogism_data_path=<path>     The path to the syllogism_data.tsv. [default: syllomaker_master/toy_syllogism_data.tsv]
+    -d --device=<str>                   Choose the device on which to run the model [default: cpu]
 """
 
 
@@ -56,7 +57,7 @@ def load_model_and_tokenizer(model_size):
     input: model_size
     output: model, tokenizer, device
     """
-    transformers.set_seed(0)  # Ensure reproducibility
+    #transformers.set_seed(0)  # Ensure reproducibility
     transformers.logging.set_verbosity_error()  # Silence warning
 
     print(f"# Loading model pythia-{model_size}... #")
@@ -71,7 +72,9 @@ def load_model_and_tokenizer(model_size):
         cache_dir=f"./cache/pythia-{model_size}") 
 
     # Check for CUDA (faster), else run on CPU
-    device = "cuda:0" if torch.cuda.is_available() else "cpu"
+    if torch.cuda.is_available():
+        device = "cuda:0" if args["--device"] == 'cuda' else 'cpu'
+    else: device = "cpu"
     print(f"# The model pythia-{model_size} is loaded on the device: {device} #")
     return model, tokenizer, device
 
