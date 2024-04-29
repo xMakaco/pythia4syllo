@@ -72,9 +72,7 @@ def load_model_and_tokenizer(model_size):
         cache_dir=f"./cache/pythia-{model_size}") 
 
     # Check for CUDA (faster), else run on CPU
-    if torch.cuda.is_available():
-        device = "cuda:0" if args["--device"] == 'cuda' else 'cpu'
-    else: device = "cpu"
+    device = args["--device"] if torch.cuda.is_available() else "cpu"
     print(f"# The model pythia-{model_size} is loaded on the device: {device} #")
     return model, tokenizer, device
 
