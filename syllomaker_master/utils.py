@@ -80,7 +80,7 @@ def make_conclusion(mood, fig, p, s):
     
     valid_lists = [
         ['A', 'AA1'], 
-        ['I', 'AA1', 'AA3', 'AA4', 'AI3', 'IA3', 'IA4'], 
+        ['I', 'AA1', 'AA3', 'AA4', 'AI1', 'AI3', 'IA3', 'IA4'], 
         ['E', 'AE4', 'EA1', 'EA2'], 
         ['O', 'AE2', 'AE4', 'EA1', 'EA2', 'EA3', 'EA4', 'AO2', 'OA3', 'EI1', 'EI2', 'EI3', 'EI4']
         ] # these are all the valid syllogisms classified by the mood of their valid conclusion
