@@ -45,7 +45,7 @@ def make_word():
     # GET A RANDOM WORD FROM THOSE SYNSETS
     word = random.choice(synsets).name().split('.')[0].replace('_', ' ')
     # QUICKLY AND NON-EXHAUSTIVELY PLURALISE WORDS
-    word = word + 'es' if word[-1] in ['s', 'x', 'z'] or word[-2:] in ['sh', 'ch'] else word + 's'
+    word = word + 'es' if word[-1] in ['s', 'x', 'z', 'y'] or word[-2:] in ['sh', 'ch'] else word + 's'
     
     return word
 
