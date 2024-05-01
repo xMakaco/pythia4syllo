@@ -23,6 +23,43 @@ Each interaction, whether in chat mode or when loading a dataset, is stored in a
 
 By separating each interaction into log files, analysis and tracking of model performance become more manageable.
 
----
 
-Feel free to enhance Pythia4syllo's capabilities and contribute to its development. If you encounter any issues or have suggestions, please create an issue on GitHub or submit a pull request.
+## Main Functions explanation
+
+### `load_model_and_tokenizer(model_size)`
+
+Choose and load the Pythia model and tokenizer.
+
+- **Input:** `model_size` - The size of the Pythia model.
+- **Output:** `model`, `tokenizer`, `device` - The loaded model, tokenizer, and the device where the model is loaded.
+
+### `ask_question(prompt)`
+
+Interact with the loaded Pythia model.
+
+- **Input:** `prompt` - The prompt to interact with the model.
+- **Output:** `answer` - The generated response from the model.
+
+### `chat_with_model()`
+
+Interact with the Pythia model using manual input.
+
+- **Functionality:** Engages in a chat-style interaction with the loaded model, allowing users to input prompts and receive responses.
+- **Output:** Stores the chat log in 'chat_log.tsv'.
+
+### `run_model_on_data()`
+
+Load a dataset and run the Pythia model for each row.
+
+- **Functionality:** Loads a dataset of syllogisms and runs the Pythia model for each row, generating responses.
+- **Output:** Stores the results in a log file.
+
+## Additional Libraries
+
+- `transformers`: Used to load the Pythia model.
+- `torch`: Needed to work with tensors.
+- `docopt`: Used for argument parsing and managing the version of the program.
+- `pandas`: Used to load and create DataFrames to store results.
+- `os`: Libraries to manage files and create the log file.
+- `tqdm`: Provides a simple progress bar for iterating over the dataset.
+
