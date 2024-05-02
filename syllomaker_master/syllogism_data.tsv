@@ -1,14 +1,14 @@
 type	premise_1	premise_2	conclusion	conclusion_2
-AI1	All pomes are meat houses.	Some perilymphs are pomes.	NVC	
-AI1	All organs are shoulder bags.	Some cuffs are organs.	NVC	
-AI1	All garden peas are thrusters.	Some cardholders are garden peas.	NVC	
-AI1	All hyperons are bathyerguses.	Some india-rubber trees are hyperons.	NVC	
-AI1	All chaffs are oyster bars.	Some coniferopsidas are chaffs.	NVC	
-AI3	All eye contacts are sea lettuces.	Some eye contacts are red-breasted sapsuckers.	Some red-breasted sapsuckers are sea lettuces.	
-AI3	All acoustic nerves are somalian shillings.	Some acoustic nerves are commissarys.	Some commissarys are somalian shillings.	
-AI3	All significances are malpighias.	Some significances are race meetings.	Some race meetings are malpighias.	
-AI3	All neurectomys are chess sets.	Some neurectomys are cuts.	Some cuts are chess sets.	
-AI3	All lepers are marshall plans.	Some lepers are kotas.	Some kotas are marshall plans.	
+AI1	All kiliwas are philemons.	Some differential calculuses are kiliwas.	Some differential calculuses are philemons.	
+AI3	All tutees are aspergilluses.	Some tutees are lasiocampas.	Some lasiocampas are aspergilluses.	
+AI1	All change ringings are applecarts.	Some eclats are change ringings.	Some eclats are applecarts.	
+AI1	All blades are conventionalitys.	Some keyholes are blades.	Some keyholes are conventionalitys.	
+AI1	All comedowns are peleuses.	Some fryes are comedowns.	Some fryes are peleuses.	
+AI4	All cast irons are epistemic logics.	Some epistemic logics are lineages.	NVC	
+AI4	All expectorants are sacrifice flys.	Some sacrifice flys are emplacements.	NVC	
+AI4	All dot matrixes are japanese deers.	Some japanese deers are volapuks.	NVC	
+AI2	All rapids are deer ferns.	Some tudors are deer ferns.	NVC	
+AI4	All housewiferys are augustinian hermitses.	Some augustinian hermitses are dead nettles.	NVC	
 AA1	All stellarias are el salvadoran monetary units.	All satellite receivers are stellarias.	All satellite receivers are el salvadoran monetary units.	Some satellite receivers are el salvadoran monetary units.
 AA1	All bath mats are linoleums.	All samoyedics are bath mats.	All samoyedics are linoleums.	Some samoyedics are linoleums.
 AA1	All sceliphrons are securitys.	All beatings are sceliphrons.	All beatings are securitys.	Some beatings are securitys.
