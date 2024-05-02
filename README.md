@@ -52,6 +52,9 @@ Interact with the Pythia model using manual input.
 Load a dataset and run the Pythia model for each row.
 
 - **Functionality:** Loads a dataset of syllogisms and runs the Pythia model for each row, generating responses.
+- **User Inputs:**
+  - `context` - Optional, space where to add any kind of contextual knowledge about the task at hand, the definition of syllogisms, etc.
+  - `trigger` - The phrase that prompts the model to give a logical answer, i.e. "It follows that: ", "Therefore, ", etc.
 - **Output:** Stores the results in a log file.
 
 ## Additional Libraries
