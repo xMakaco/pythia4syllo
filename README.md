@@ -1,6 +1,6 @@
-# Pythia4syllo
+# pythia4syllo
 
-Pythia4syllo is a Python program designed to facilitate interaction with the Pythia model in a chat-styled manner or to probe it with a dataset of syllogisms.
+pythia4syllo is a Python program designed to facilitate interaction with the Pythia model in a chat-styled manner or to probe it with a dataset of syllogisms.
 
 ## Usage
 
