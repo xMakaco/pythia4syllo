@@ -1,14 +1,4 @@
 type	premise_1	premise_2	conclusion	conclusion_2
-AI1	All kiliwas are philemons.	Some differential calculuses are kiliwas.	Some differential calculuses are philemons.	
-AI3	All tutees are aspergilluses.	Some tutees are lasiocampas.	Some lasiocampas are aspergilluses.	
-AI1	All change ringings are applecarts.	Some eclats are change ringings.	Some eclats are applecarts.	
-AI1	All blades are conventionalitys.	Some keyholes are blades.	Some keyholes are conventionalitys.	
-AI1	All comedowns are peleuses.	Some fryes are comedowns.	Some fryes are peleuses.	
-AI4	All cast irons are epistemic logics.	Some epistemic logics are lineages.	NVC	
-AI4	All expectorants are sacrifice flys.	Some sacrifice flys are emplacements.	NVC	
-AI4	All dot matrixes are japanese deers.	Some japanese deers are volapuks.	NVC	
-AI2	All rapids are deer ferns.	Some tudors are deer ferns.	NVC	
-AI4	All housewiferys are augustinian hermitses.	Some augustinian hermitses are dead nettles.	NVC	
 AA1	All stellarias are el salvadoran monetary units.	All satellite receivers are stellarias.	All satellite receivers are el salvadoran monetary units.	Some satellite receivers are el salvadoran monetary units.
 AA1	All bath mats are linoleums.	All samoyedics are bath mats.	All samoyedics are linoleums.	Some samoyedics are linoleums.
 AA1	All sceliphrons are securitys.	All beatings are sceliphrons.	All beatings are securitys.	Some beatings are securitys.
@@ -59,3 +49,13 @@ EI3	No rubialeses are meteorological balloons.	Some rubialeses are strike zones.
 EI4	No percolates are fire brigades.	Some fire brigades are bonitos.	Some bonitos are not percolates.	
 EI1	No monofocal lens implants are oolongs.	Some folks are monofocal lens implants.	Some folks are not oolongs.	
 EI3	No draws are hatchet mans.	Some draws are baby beds.	Some baby beds are not hatchet mans.	
+AI1	All kiliwas are philemons.	Some differential calculuses are kiliwas.	Some differential calculuses are philemons.	
+AI3	All tutees are aspergilluses.	Some tutees are lasiocampas.	Some lasiocampas are aspergilluses.	
+AI1	All change ringings are applecarts.	Some eclats are change ringings.	Some eclats are applecarts.	
+AI1	All blades are conventionalitys.	Some keyholes are blades.	Some keyholes are conventionalitys.	
+AI1	All comedowns are peleuses.	Some fryes are comedowns.	Some fryes are peleuses.	
+AI4	All cast irons are epistemic logics.	Some epistemic logics are lineages.	NVC	
+AI4	All expectorants are sacrifice flys.	Some sacrifice flys are emplacements.	NVC	
+AI4	All dot matrixes are japanese deers.	Some japanese deers are volapuks.	NVC	
+AI2	All rapids are deer ferns.	Some tudors are deer ferns.	NVC	
+AI4	All housewiferys are augustinian hermitses.	Some augustinian hermitses are dead nettles.	NVC	
