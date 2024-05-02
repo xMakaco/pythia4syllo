@@ -35,7 +35,7 @@ Choose and load the Pythia model and tokenizer.
 
 ### `ask_question(prompt)`
 
-Interact with the loaded Pythia model.
+Actually interrograte the model. Here the model hyperparameters can be found.
 
 - **Input:** `prompt` - The prompt to interact with the model.
 - **Output:** `answer` - The generated response from the model.
