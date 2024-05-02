@@ -59,10 +59,17 @@ Load a dataset and run the Pythia model for each row.
 
 ## Additional Libraries
 
+The required libraries can be installed with: 
+
+```
+pip install -r requirements.txt
+```
+
+Here, a general overlook on them:
+
 - `transformers`: Used to load the Pythia model.
 - `torch`: Needed to work with tensors.
 - `docopt`: Used for argument parsing and managing the version of the program.
 - `pandas`: Used to load and create DataFrames to store results.
 - `os`: Libraries to manage files and create the log file.
 - `tqdm`: Provides a simple progress bar for iterating over the dataset.
-
