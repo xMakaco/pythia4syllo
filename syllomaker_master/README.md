@@ -46,7 +46,7 @@ python3 syllomaker.py --mood AI --figure 3 --items philosophers,great,greeks
 Given the mood and figure of the two premises, Syllomaker generates the valid conclusion(s) or "NVC" (No Valid Conclusion), and stores all this data in a .tsv file. The dataset generated with Syllomaker will look like this:
 | Type | Premise 1 | Premise 2 | Conclusion | Conclusion 2 |
 | :----| :-------- | :-------- | :--------- | :----------- |
-| AI3  | All philosophers are great. | Some philosophers are Greeks. | Some Greeks are great. |  |
+| AI3  | All philosophers are great. | Some philosophers are Poles. | Some Poles are great. |  |
 | AA1  | All cats are pets. | All pets are beautiful. | All cats are beautiful. | Some cats are beautiful. |
 | EO4  | No tiramisùs are pizzas. | Some pizzas are not cheap. | NVC |  |
 | ...  | ...       | ...       | ...        | ...          |
@@ -56,7 +56,4 @@ The only libraries needed are nltk and docopt. To install them, run either
 ```
 pip install nltk docopt
 ```
-or simply
-```
-pip install -r requirements.txt
-```
+or simply install the _pythia4syllo_ general requirements.

@@ -20,11 +20,10 @@ You can provide the following arguments:
 ## Logging
 
 Each interaction, whether in chat mode or when loading a dataset, is stored in a log file with the current model and modality in use. For example, if you are using a 12B model with a dataset, the log file will be named "log_12B_dataset.tsv".
-
 By separating each interaction into log files, analysis and tracking of model performance become more manageable.
 
 
-## Main Functions explanation
+## Main functions explanation
 
 ### `load_model_and_tokenizer(model_size)`
 
@@ -35,29 +34,27 @@ Choose and load the Pythia model and tokenizer.
 
 ### `ask_question(prompt)`
 
-Actually interrograte the model. Here the model hyperparameters can be found.
+Actually interrograte the model. The model hyperparameters can be found here.
 
 - **Input:** `prompt` - The prompt to interact with the model.
 - **Output:** `answer` - The generated response from the model.
 
 ### `chat_with_model()`
 
-Interact with the Pythia model using manual input.
+Interact with the Pythia model using manual input, engaging in a chat-style interaction with the already loaded model, thus allowing users to input prompts and receive responses.
 
-- **Functionality:** Engages in a chat-style interaction with the loaded model, allowing users to input prompts and receive responses.
 - **Output:** Stores the chat log in 'chat_log.tsv'.
 
 ### `run_model_on_data()`
 
-Load a dataset and run the Pythia model for each row.
+Load a dataset of syllogisms and run the Pythia model for each row, generating a response for each syllogism given.
 
-- **Functionality:** Loads a dataset of syllogisms and runs the Pythia model for each row, generating responses.
 - **User Inputs:**
   - `context` - Optional, space where to add any kind of contextual knowledge about the task at hand, the definition of syllogisms, etc.
   - `trigger` - The phrase that prompts the model to give a logical answer, i.e. "It follows that: ", "Therefore, ", etc.
 - **Output:** Stores the results in a log file.
 
-## Additional Libraries
+## Additional libraries
 
 The required libraries can be installed with: 
 
@@ -65,11 +62,10 @@ The required libraries can be installed with:
 pip install -r requirements.txt
 ```
 
-Here, a general overlook on them:
-
+Here we provide a general overlook on them:
 - `transformers`: Used to load the Pythia model.
 - `torch`: Needed to work with tensors.
 - `docopt`: Used for argument parsing and managing the version of the program.
 - `pandas`: Used to load and create DataFrames to store results.
-- `os`: Libraries to manage files and create the log file.
+- `nltk`: Used in _Syllomaker_ to access WordNet and process words.
 - `tqdm`: Provides a simple progress bar for iterating over the dataset.
